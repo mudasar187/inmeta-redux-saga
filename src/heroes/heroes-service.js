@@ -6,11 +6,11 @@ export async function getHeroes() {
   return await axios.get(BaseUrl);
 }
 
-export async function getHeroesById(id) {
+export async function getHeroById(id) {
   return await axios.get(`${BaseUrl}/${id}`);
 }
 
-export async function deleteHero(id) {
+export async function deleteHeroById(id) {
   return await axios.delete(`${BaseUrl}/${id}`);
 }
 
