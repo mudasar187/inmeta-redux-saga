@@ -1,5 +1,5 @@
-import { put, takeEvery, call, fork } from "redux-saga/effect";
-import { all } from "@redux-saga/core/effect";
+import { put, takeEvery, call, fork } from "redux-saga/effects";
+import { all } from "@redux-saga/core/effects";
 import {
   postHero,
   getHeroes,

@@ -5,18 +5,20 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import RootRouter from "./root-router";
 import { Provider } from "react-redux";
-
-import Heroes from "./heroes/pages/Heroes";
+import store from "./store";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <>
-        <div className="container">
-          <RootRouter />
-        </div>
-      </>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <>
+          <h2>Navigation Bar</h2>
+          <div className="container">
+            <RootRouter />
+          </div>
+        </>
+      </BrowserRouter>
+    </Provider>
   );
 };
 
