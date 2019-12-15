@@ -1,14 +1,22 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+
+import { BrowserRouter } from "react-router-dom";
+import RootRouter from "./root-router";
+import { Provider } from "react-redux";
 
 import Heroes from "./heroes/pages/Heroes";
-import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Heroes />
-    </div>
+    <BrowserRouter>
+      <>
+        <div className="container">
+          <RootRouter />
+        </div>
+      </>
+    </BrowserRouter>
   );
 };
 
