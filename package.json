@@ -26,10 +26,9 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "serve": "react-scripts start",
+    "backend": "json-server --watch db.json --port 5000 --delay=1000",
+    "start": "concurrently \"npm run backend\" \"npm run serve\""
   },
   "eslintConfig": {
     "extends": "react-app"
